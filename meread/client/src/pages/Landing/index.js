@@ -17,8 +17,9 @@ function Landing() {
           <img 
             src={Logo} 
             alt="meread logo"
+            className="animated zoomIn slow"
           />
-          <h4 className="slogan">hyperspace readme generator</h4>
+          <h4 className="slogan animated zoomIn slow">hyperspace readme generator</h4>
           
           <Link to="/Generator">
             <button className="btn btn-secondary start-btn">
