@@ -1,0 +1,23 @@
+.footer {
+  min-height: 50px;
+  background: #878787;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+}
+
+span {
+  color: #444444;
+  font-size: 9pt;
+  line-height: 3px;
+}
+
+p {
+  color: #444444;
+  font-size: 9pt;
+  line-height: 3px;
+  padding-top: 3px;
+}

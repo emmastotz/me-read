@@ -1,0 +1,38 @@
+img {
+  width: 70%;
+  height: auto;
+  margin-top: 2%;
+  z-index: 1;
+}
+
+h4 {
+  color: white;
+  z-index: 1;
+}
+
+img#baby-yoda {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  height: 20%;
+  width: auto;
+  z-index: 1;
+}
+
+@media screen and (min-width:640px){
+  img#baby-yoda {
+    bottom: 0px;
+  }
+}
+
+@media screen and (min-width:641px) and (max-width:768px){
+}
+
+@media screen and (min-width:769px) and (max-width:980px){
+}
+
+@media screen and (min-width:981px){
+}
+
+@media screen and (min-width:1115px){
+}
