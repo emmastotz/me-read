@@ -10,6 +10,7 @@ import API from "../../utils/API";
 import "./style.css";
 import marked from 'marked';
 import Editor from "../../components/Editor/";
+import BabyYodish from '../../utils/BabyYoda';
 
 class Generator extends Component {
   constructor(){
@@ -76,6 +77,24 @@ Please make sure to update tests as appropriate.
     })
   }
 
+  formHandleSubmit = event => {
+    event.preventDefault();
+    console.log('Going for the baby Yoda!');
+    this.setState({ yodish: '' });
+    this.translateToYodish(this.state);
+  };
+
+  translateToYodish = query => {
+    BabyYodish.getYodish(query).then((res) => {
+      console.log(res);
+      console.log('above is the full res');
+      this.setState({ yodish: res.contents })
+      console.log('Below is Yodish');
+      console.log(this.state.yodish);
+    })
+      .catch(err => console.log(err));
+  };
+
   render(){
 
     const handleChange = (event) => {
@@ -118,6 +137,11 @@ Please make sure to update tests as appropriate.
                 className="btn btn-secondary btns" 
                 type="button">
                   <a href="mailto:meread@gmail.com" id="email">Email</a>
+                </button>
+                <button 
+                className='btn btn-secondary btns' 
+                onClick={this.formHandleSubmit}>
+                  Baby Yoda
                 </button>
               </div>
               <div className="col-2"></div>
