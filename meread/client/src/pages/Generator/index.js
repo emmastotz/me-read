@@ -84,12 +84,6 @@ class Generator extends Component {
                 type="button">
                   <a href="mailto:meread@gmail.com" id="email">Email</a>
                 </button>
-                <button 
-                className="btn btn-secondary btns"
-                data={this.state} 
-                onClick={this.handleTranslation}>
-                  Translate
-                </button>
               </div>
               <div className="col-2"></div>
             </div>
