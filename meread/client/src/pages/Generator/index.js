@@ -113,7 +113,7 @@ Please make sure to update tests as appropriate.
             src={Logo} 
             alt="meread logo"
           />
-          <h4>hyperspace readme generator</h4>
+          <h4 className="slogan">hyperspace readme generator</h4>
           <div className="container">
             <div className="row">
               <div className="col-lg-6 col-md-6 col-sm-12">
