@@ -5,12 +5,12 @@ img {
   z-index: 1;
 }
 
-h4 {
+h4.slogan {
   color: white;
   z-index: 1;
 }
 
-button.btn {
+.start-btn {
   margin-top: 20%;
   background-color: #878787;
   z-index: 1;
@@ -57,7 +57,7 @@ img#baby-yoda {
   video#myVideo {
     height: 100%;
   }
-  button.btn {
+  .start-btn {
     margin-top: 25%;
   }
   img#baby-yoda {
@@ -66,7 +66,7 @@ img#baby-yoda {
 }
 
 @media screen and (min-width:641px) and (max-width:768px){
-  button.btn {
+  .start-btn {
     margin-top: 25%;
   }
 }
@@ -75,7 +75,7 @@ img#baby-yoda {
   video#myVideo {
     height: 100%;
   }
-  button.btn {
+  button.start-btn {
     margin-top: 18%;
   }
   img {
@@ -87,7 +87,7 @@ img#baby-yoda {
 }
 
 @media screen and (min-width:981px){
-  button.btn {
+  .start-btn {
     margin-top: 10%;
   }
   img {

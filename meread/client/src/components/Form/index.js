@@ -29,32 +29,35 @@ function Form(props){
         </div>
         <div className="form-group">
           <h6>Problem/Solution</h6>
-          <input
+          <textarea
             value={props.data.problem}
             name="problem"
             onChange={props.onInputChange}
             type="text"
             className="form-control"
+            rows="2"
           />
         </div>
         <div className="form-group">
           <h6>Overview/Project Outline</h6>
-          <input
+          <textarea
             value={props.data.overview}
             name="overview"
             onChange={props.onInputChange}
             type="text"
             className="form-control"
+            rows="5"
           />
         </div>
         <div className="form-group">
           <h6>Technologies Used</h6>
-          <input
+          <textarea
             value={props.data.technologies}
             name="technologies"
             onChange={props.onInputChange}
             type="text"
             className="form-control"
+            rows="5"
           />
         </div>
         <div className="form-group">

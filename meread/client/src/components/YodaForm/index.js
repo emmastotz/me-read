@@ -2,7 +2,7 @@ import React from "react";
 import Wrapper from "../Wrapper";
 import "./style.css";
 
-function DisplayForm(props){
+function YodaForm(props){
   console.log(props);
 
   return (
@@ -31,4 +31,4 @@ function DisplayForm(props){
   );
 };
 
-export default DisplayForm;
+export default YodaForm;

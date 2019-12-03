@@ -17,9 +17,13 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #878787;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+textarea {
+  overflow-y: scroll;
 }

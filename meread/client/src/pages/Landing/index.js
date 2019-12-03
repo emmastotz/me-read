@@ -18,11 +18,11 @@ function Landing() {
             src={Logo} 
             alt="meread logo"
           />
-          <h4>hyperspace readme generator</h4>
+          <h4 className="slogan">hyperspace readme generator</h4>
           
           <Link to="/Generator">
-            <button className="btn btn-secondary">
-              <i className="fas fa-play-circle"></i>START
+            <button className="btn btn-secondary start-btn">
+              START
             </button>
           </Link>
         </Wrapper>

@@ -15,14 +15,14 @@ function HTMLForm(props){
           <p>{props.data.problem}</p>
           <p>##### {props.data.name} Overview: </p>
           <ul>
-            {props.data.overview}
+            * {props.data.overview}
           </ul>
           <p>##### Technologies Used: </p>
           <ul>
-            {props.data.technologies}
+            * {props.data.technologies}
           </ul>
-          <p>##### Deployed At: {props.data.deployment}</p>
-          <p>This app was created by: {props.data.created}</p>
+          <p>##### Deployed at: {props.data.deployment}</p>
+          <p>This app was created by {props.data.created}</p>
         </div>
       </Wrapper>
     </div>

@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import DisplayForm from "../DisplayForm";
 import HTMLForm from "../HTMLForm";
+import YodaForm from "../YodaForm";
 import "./style.css";
 
 class Navbar extends Component {
@@ -31,14 +32,17 @@ class Navbar extends Component {
 
     return (
       <div className="container jumbotron">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar">
           <div>
-            <ul className="navbar-nav">
+            <ul className="nav nav-tabs">
               <li onClick={() => changeTab('html')} className={getNavClass("html")}>
                 HTML
               </li>
               <li onClick={() => changeTab('output')} className={getNavClass("output")}>
                 Output
+              </li>
+              <li onClick={() => changeTab('babyYoda')} className={getNavClass("babyYoda")}>
+                Baby Yoda
               </li>
             </ul>
           </div>
@@ -50,6 +54,9 @@ class Navbar extends Component {
           }
           { this.state.tabClicked === "output" && 
             <DisplayForm data={this.props.data} />
+          }
+          { this.state.tabClicked === "babyYoda" && 
+            <YodaForm data={this.props.data} />
           }
         </div>
       </div>

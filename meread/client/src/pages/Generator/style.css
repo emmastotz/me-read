@@ -5,27 +5,64 @@ img {
   z-index: 1;
 }
 
-h4 {
+h4.slogan {
   color: white;
   z-index: 1;
 }
 
 img#baby-yoda {
   position: fixed;
-  bottom: 50px;
-  right: 20px;
-  height: 20%;
+  bottom: 0;
+  right: 0;
+  height: 15%;
   width: auto;
   z-index: 1;
 }
 
+video#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+  z-index: -1;
+}
+
+.button-row {
+  text-align: center;
+}
+
+button.btns {
+  margin-top: 0;
+  margin-left: 2.25%;
+  text-decoration: none;
+  color: white;
+  background-color: #878787;
+}
+
+a:link {
+  color: white;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
 @media screen and (min-width:640px){
   img#baby-yoda {
-    bottom: 0px;
+    bottom: 0;
+    height: 20%;
   }
 }
 
 @media screen and (min-width:641px) and (max-width:768px){
+  img#baby-yoda {
+    bottom: 0;
+    right: 20px;
+    height: 20%;
+  }
 }
 
 @media screen and (min-width:769px) and (max-width:980px){
@@ -35,4 +72,7 @@ img#baby-yoda {
 }
 
 @media screen and (min-width:1115px){
+  video#myVideo{
+    visibility: hidden;
+  }
 }

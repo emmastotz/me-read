@@ -1,3 +1,20 @@
 nav.navbar.navbar-default {
   margin-bottom: 1%;
 }
+
+nav {
+  background-color: transparent;
+  border-radius: 5pt;
+  margin-top: 0;
+}
+
+.nav-tabs {
+  background-color: #878787;
+  color: white;
+  border-radius: 5pt;
+}
+
+.active {
+  border-radius: 5pt;
+  background-color: white;
+}
