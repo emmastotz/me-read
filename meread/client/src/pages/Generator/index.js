@@ -18,10 +18,11 @@ class Generator extends Component {
     this.state = {
       value: "",
       copied: false,
-      markdown:`# Foobar
+      yodish: "",
+      markdown: `
+#Foobar
 
 Foobar is a Python library for dealing with word pluralization.
-
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
@@ -81,14 +82,18 @@ Please make sure to update tests as appropriate.
     event.preventDefault();
     console.log('Going for the baby Yoda!');
     this.setState({ yodish: '' });
-    this.translateToYodish(this.state);
+    this.translateToYodish(this.state.renderedText);
   };
 
   translateToYodish = query => {
-    BabyYodish.getYodish(query).then((res) => {
+    console.log(query);
+    let result = query.replace(/<[^>]+>/g, '').trim();
+    let result2 = result.replace(/\r?\n|\r/g, '');
+    console.log(result2);
+    BabyYodish.getYodish(result2).then((res) => {
       console.log(res);
       console.log('above is the full res');
-      this.setState({ yodish: res.contents })
+      this.setState({ yodish: res })
       console.log('Below is Yodish');
       console.log(this.state.yodish);
     })

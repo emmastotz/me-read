@@ -47,10 +47,9 @@ class Navbar extends Component {
         <div className="display-area">
           { this.state.tabClicked === "output" && 
             <Preview renderedText={this.props.data.renderedText}/>
-            // <DisplayForm data={this.props.data} />
           }
           { this.state.tabClicked === "babyYoda" && 
-            <YodaForm data={this.props.data} />
+            <YodaForm yodish={this.props.data.yodish} />
           }
         </div>
       </div>

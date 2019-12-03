@@ -5,28 +5,19 @@ import "./style.css";
 function YodaForm(props){
   console.log(props);
 
+  let renderedHtml = {__html: props.yodish};
+
   return (
     <div>
       <Wrapper>
         <div className="container display-form">
-          {/* Insert Ternary statement here. */}
-          <h6>Click translate below to translate your readme into Yodish.</h6>
-          {/* <h3>{props.data.name}</h3>
-          <p>{props.data.description}</p>
-          <h6>Problem/Solution</h6>
-          <p>{props.data.problem}</p>
-          <h6>{props.data.name} Overview:</h6>
-          <ul>
-            <li>{props.data.overview}</li>
-          </ul>
-          <h6>Technologies Used:</h6>
-          <ul>
-            <li>{props.data.technologies}</li>
-          </ul>
-          <h6>Deployed at:
-            <a href={props.data.deployment}> {props.data.deployment} </a>
-          </h6>
-          <h6>Created by {props.data.created}, this app was.</h6> */}
+          {props.yodish === '' && 
+            <h6>Click translate below to translate your readme into Yodish.</h6>
+          }
+        
+          {props.yodish.length > 0 &&
+            <h6 dangerouslySetInnerHTML={renderedHtml}></h6>
+          }
         </div>
       </Wrapper>
     </div>

@@ -2,6 +2,7 @@ import axios from 'axios';
 export default {
 
   getYodish: function (textToTranslate) {
+    console.log(textToTranslate);
     return axios({
       'method': 'POST',
       'url': 'https://yodish.p.rapidapi.com/yoda.json',
