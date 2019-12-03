@@ -12,7 +12,7 @@ function YodaForm(props){
       <Wrapper>
         <div className="container display-form">
           {props.yodish === '' && 
-            <h6>Click translate below to translate your readme into Yodish.</h6>
+            <h6>Click Baby Yoda below to translate your readme into Yodish.</h6>
           }
         
           {props.yodish.length > 0 &&
