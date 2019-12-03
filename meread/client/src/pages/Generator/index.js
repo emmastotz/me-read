@@ -151,7 +151,7 @@ Please make sure to update tests as appropriate.
           src={BabyYoda}
           alt="Baby Yoda"
           id="baby-yoda"
-          className="animated slideInUp slow delay-2s"
+          className="animated bounce delay-1s"
         />
         <Footer />
       </div>
