@@ -1,0 +1,16 @@
+/* div.container {
+  background-color: #878787;
+  border-radius: 5px;
+} */
+
+div.Preview {
+  margin-top: 40px;
+  background-color: white;
+  border-radius: 5px;
+  overflow-y: scroll;
+  height: 500px;
+}
+
+p {
+  font-size: 12pt;
+}

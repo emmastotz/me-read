@@ -1,0 +1,7 @@
+textarea#input {
+  height: 500px;
+  width: 100%;
+  overflow-y: scroll;
+  /* background-color: #878787; */
+  padding-bottom: 100px;
+}

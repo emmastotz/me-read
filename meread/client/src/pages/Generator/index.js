@@ -5,8 +5,7 @@ import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
 import Logo from "../../logo.png";
 import BabyYoda from "../../baby-yoda.png";
-// import Form from "../../components/Form";
-// import Navbar from "../../components/Navbar";
+import Navbar from "../../components/Navbar";
 import API from "../../utils/API";
 import "./style.css";
 import marked from 'marked';
@@ -108,12 +107,11 @@ Please make sure to update tests as appropriate.
           <div className="container">
             <div className="row">
               <div className="col-lg-6 col-md-6 col-sm-12">
-                {/* <Form data={this.state} onFormSubmit={this.handleSubmitForm} onInputChange={this.handleInputChange} /> */}
                 <Editor markdown={this.state.markdown} onChange={handleChange}/>
               </div>
               <div className="col-lg-6 col-md-6 col-sm-12">
-                {/* <Navbar data={this.state}/>  */}
-                <Preview renderedText={this.state.renderedText}/>
+                <Navbar data={this.state}/> 
+                {/* <Preview renderedText={this.state.renderedText}/> */}
               </div>
             </div>
             <div className="row button-row">
