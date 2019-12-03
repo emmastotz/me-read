@@ -17,8 +17,7 @@ class Generator extends Component {
     this.state = {
       value: "",
       copied: false,
-      markdown:`
-# Foobar
+      markdown:`# Foobar
 
 Foobar is a Python library for dealing with word pluralization.
 

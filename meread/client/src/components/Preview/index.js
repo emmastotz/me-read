@@ -7,7 +7,6 @@ const Preview = props => {
 		<div>
 			<Wrapper>
 				<div className="container">
-					{/* <Preview rendered={this.props.rendered}/> */}
 					<div className="Preview" dangerouslySetInnerHTML={{__html: props.renderedText}}></div>
 				</div>
 			</Wrapper>
