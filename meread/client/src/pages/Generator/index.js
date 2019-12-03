@@ -5,25 +5,62 @@ import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
 import Logo from "../../logo.png";
 import BabyYoda from "../../baby-yoda.png";
-import Form from "../../components/Form";
-import Navbar from "../../components/Navbar";
+// import Form from "../../components/Form";
+// import Navbar from "../../components/Navbar";
 import API from "../../utils/API";
 import "./style.css";
+import marked from 'marked';
+import Editor from "../../components/Editor/";
+import Preview from "../../components/Preview";
 
 class Generator extends Component {
   constructor(){
     super()
     this.state = {
-      name: "",
-      description: "",
-      problem: "",
-      overview: "",
-      technologies: "",
-      deployment: "",
-      created: "",
+      // name: "",
+      // description: "",
+      // problem: "",
+      // overview: "",
+      // technologies: "",
+      // deployment: "",
+      // created: "",
       value: "",
-      copied: false
+      copied: false,
+      markdown:`
+# Foobar
+
+Foobar is a Python library for dealing with word pluralization.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+
+Bash
+pip install foobar
+
+## Usage
+
+python
+import foobar
+
+foobar.pluralize('word') # returns 'words'
+foobar.pluralize('goose') # returns 'geese'
+foobar.singularize('phenomena') # returns 'phenomenon'
+
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)`,
+      renderedText: ""
     }
+  }
+
+  componentDidMount = () => {
+    this.setState({renderedText: marked(this.state.markdown)});
   }
   
   handleInputChange = event => {
@@ -50,6 +87,13 @@ class Generator extends Component {
   }
 
   render(){
+
+    const handleChange = (event) => {
+			this.setState({
+				markdown: event.target.value,
+				renderedText: marked(event.target.value)
+			})
+		}
     return (
       <div>
         <Wrapper>
@@ -64,10 +108,12 @@ class Generator extends Component {
           <div className="container">
             <div className="row">
               <div className="col-lg-6 col-md-6 col-sm-12">
-                <Form data={this.state} onFormSubmit={this.handleSubmitForm} onInputChange={this.handleInputChange} />
+                {/* <Form data={this.state} onFormSubmit={this.handleSubmitForm} onInputChange={this.handleInputChange} /> */}
+                <Editor markdown={this.state.markdown} onChange={handleChange}/>
               </div>
               <div className="col-lg-6 col-md-6 col-sm-12">
-                <Navbar data={this.state}/> 
+                {/* <Navbar data={this.state}/>  */}
+                <Preview renderedText={this.state.renderedText}/>
               </div>
             </div>
             <div className="row button-row">
