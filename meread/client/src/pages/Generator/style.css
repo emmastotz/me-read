@@ -19,6 +19,10 @@ img#baby-yoda {
   z-index: 1;
 }
 
+img#baby-yoda:hover {
+  
+}
+
 video#myVideo {
   position: fixed;
   right: 0;
