@@ -10,19 +10,11 @@ import API from "../../utils/API";
 import "./style.css";
 import marked from 'marked';
 import Editor from "../../components/Editor/";
-import Preview from "../../components/Preview";
 
 class Generator extends Component {
   constructor(){
     super()
     this.state = {
-      // name: "",
-      // description: "",
-      // problem: "",
-      // overview: "",
-      // technologies: "",
-      // deployment: "",
-      // created: "",
       value: "",
       copied: false,
       markdown:`
@@ -111,7 +103,6 @@ Please make sure to update tests as appropriate.
               </div>
               <div className="col-lg-6 col-md-6 col-sm-12">
                 <Navbar data={this.state}/> 
-                {/* <Preview renderedText={this.state.renderedText}/> */}
               </div>
             </div>
             <div className="row button-row">
