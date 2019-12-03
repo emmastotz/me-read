@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 import Video from "../../star_burst.mp4"
 import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
@@ -19,7 +20,9 @@ class Generator extends Component {
       overview: "",
       technologies: "",
       deployment: "",
-      created: ""
+      created: "",
+      value: "",
+      copied: false
     }
   }
   
@@ -34,7 +37,16 @@ class Generator extends Component {
     event.preventDefault();
     API.saveTemplate(this.state).then(res => {
       console.log(res);
+      this.setState({value: res})
+      
     });
+  }
+
+  handleTranslation = event =>{
+    event.preventDefault();
+    BabyYoda.getYodish(this.state).then(res => {
+      console.log(res);
+    })
   }
 
   render(){
@@ -61,14 +73,22 @@ class Generator extends Component {
             <div className="row button-row">
               <div className="col-2"></div>
               <div className="col-8">
-                <button className="btn btn-secondary btns" type="save">
-                  Save
+                <CopyToClipboard 
+                  className="btn btn-secondary btns"
+                  text={this.state.value}
+                  onCopy={() => this.setState({copied: true})}>
+                  <button>Copy</button>
+                </CopyToClipboard>
+                <button 
+                className="btn btn-secondary btns" 
+                type="button">
+                  <a href="mailto:meread@gmail.com" id="email">Email</a>
                 </button>
-                <button className="btn btn-secondary btns" type="button">
-                  <a href="mailto:" id="email">Email</a>
-                </button>
-                <button className="btn btn-secondary btns" method="GET">
-                  Baby Yoda
+                <button 
+                className="btn btn-secondary btns"
+                data={this.state} 
+                onClick={this.handleTranslation}>
+                  Translate
                 </button>
               </div>
               <div className="col-2"></div>

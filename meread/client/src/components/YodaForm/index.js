@@ -9,7 +9,9 @@ function YodaForm(props){
     <div>
       <Wrapper>
         <div className="container display-form">
-          <h3>{props.data.name}</h3>
+          {/* Insert Ternary statement here. */}
+          <h6>Click translate below to translate your readme into Yodish.</h6>
+          {/* <h3>{props.data.name}</h3>
           <p>{props.data.description}</p>
           <h6>Problem/Solution</h6>
           <p>{props.data.problem}</p>
@@ -24,7 +26,7 @@ function YodaForm(props){
           <h6>Deployed at:
             <a href={props.data.deployment}> {props.data.deployment} </a>
           </h6>
-          <h6>This app was created by {props.data.created}</h6>
+          <h6>Created by {props.data.created}, this app was.</h6> */}
         </div>
       </Wrapper>
     </div>

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default {
-  getYodish: function() {
-    return axios.get("https://yodish.p.rapidapi.com/yoda.json");
+  getYodish: function(data) {
+    return axios.get("https://api.funtranslations.com/translate/yoda.json?key=GEBeU8ypgRIEp5O4fwQWsQeF&text=" + data);
   }
 }
