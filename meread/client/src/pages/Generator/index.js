@@ -109,7 +109,7 @@ Please make sure to update tests as appropriate.
               <div className="col-8">
                 <CopyToClipboard 
                   className="btn btn-secondary btns"
-                  text={this.state.value}
+                  text={this.state.markdown}
                   onCopy={() => this.setState({copied: true})}>
                   <button>Copy</button>
                 </CopyToClipboard>
