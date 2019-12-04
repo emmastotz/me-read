@@ -4,7 +4,7 @@ const templateController = require("../../controller/templateController");
 // Matches with "/api/books"
 router.route("/")
   .get(templateController.findAll)
-  .post(Controller.create);
+  .post(templateController.create);
 
 // Matches with "/api/books/:id"
 router
