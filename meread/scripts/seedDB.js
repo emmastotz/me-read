@@ -7,11 +7,5 @@ mongoose.connect(
 );
 
 const templateSeed = {
-  name: "",
-  description: "",
-  problem: "",
-  overview: "",
-  technologies: "",
-  deployment: "",
-  created: ""
+  markdown: ""
 };

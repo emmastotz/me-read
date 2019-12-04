@@ -4,7 +4,7 @@ import Video from "../../star_burst.mp4"
 import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
 import Logo from "../../logo.png";
-import BabyYoda from "../../baby-yoda.png";
+import BabyYodaGif from "../../baby-yoda1.gif";
 import Navbar from "../../components/Navbar";
 import API from "../../utils/API";
 import "./style.css";
@@ -19,34 +19,26 @@ class Generator extends Component {
       value: "",
       copied: false,
       yodish: "",
-      markdown: `
-#Foobar
+      markdown: `# Me Read
+Me Read is a hyperspace readme generator.
 
-Foobar is a Python library for dealing with word pluralization.
-## Installation
+##### Overview/Project Outline
+* server.js
+* scripts
+* routes
+* models
+* controller
+* client
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+##### Deployment
+Deployed at https://github.com/emmastotz/rebelscum
 
-Bash
-pip install foobar
+##### Created By
+Alex, Chris, Emma and Eugene
 
-## Usage
-
-python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-
-
-## Contributing
+##### Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)`,
+Please make sure to update tests as appropriate.`,
       renderedText: ""
     }
   }
@@ -62,40 +54,26 @@ Please make sure to update tests as appropriate.
     });
   }
 
-  handleSubmitForm = event => {
+  saveTemplate = event => {
     event.preventDefault();
-    API.saveTemplate(this.state).then(res => {
+    API.saveTemplate(this.state.markdown).then(res => {
+      console.log("Click function working. Res below.");
       console.log(res);
       this.setState({value: res})
-      
     });
-  }
-
-  handleTranslation = event =>{
-    event.preventDefault();
-    BabyYoda.getYodish(this.state).then(res => {
-      console.log(res);
-    })
   }
 
   formHandleSubmit = event => {
     event.preventDefault();
-    console.log('Going for the baby Yoda!');
     this.setState({ yodish: '' });
     this.translateToYodish(this.state.renderedText);
   };
 
   translateToYodish = query => {
-    console.log(query);
     let result = query.replace(/<[^>]+>/g, '').trim();
     let result2 = result.replace(/\r?\n|\r/g, '');
-    console.log(result2);
     BabyYodish.getYodish(result2).then((res) => {
-      console.log(res);
-      console.log('above is the full res');
       this.setState({ yodish: res })
-      console.log('Below is Yodish');
-      console.log(this.state.yodish);
     })
       .catch(err => console.log(err));
   };
@@ -143,9 +121,15 @@ Please make sure to update tests as appropriate.
                   <a href="mailto:meread@gmail.com" id="email">Email</a>
                 </button>
                 <button 
+                className="btn btn-secondary btns" 
+                type="button"
+                onClick={this.saveTemplate}>
+                  Save
+                </button>
+                <button 
                 className='btn btn-secondary btns' 
                 onClick={this.formHandleSubmit}>
-                  Baby Yoda
+                  Yodish
                 </button>
               </div>
               <div className="col-2"></div>
@@ -153,9 +137,9 @@ Please make sure to update tests as appropriate.
           </div>
         </Wrapper>
         <img
-          src={BabyYoda}
+          src={BabyYodaGif}
           alt="Baby Yoda"
-          id="baby-yoda"
+          id="baby-yoda-gif"
           className="animated bounce delay-1s"
         />
         <Footer />

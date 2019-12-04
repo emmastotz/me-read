@@ -2,13 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const templateSchema = new Schema({
-  name: String,
-  description: String,
-  problem: String,
-  overview: String,
-  technologies: String,
-  deployment: String,
-  created: String
+  markdown: {type: String, required: true}
 });
 
 const Template = mongoose.model("Template", templateSchema);

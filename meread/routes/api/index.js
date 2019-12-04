@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const templateRoutes = require("./template");
 
-// Book routes
-router.use("/template", templateRoutes);
+// Template routes
+router.use("/templates", templateRoutes);
 
 module.exports = router;

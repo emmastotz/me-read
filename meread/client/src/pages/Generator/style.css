@@ -13,11 +13,11 @@ h4.slogan {
   margin-bottom: 5%;
 }
 
-img#baby-yoda {
+img#baby-yoda-gif {
   position: fixed;
-  bottom: 0;
-  right: 0;
-  height: 15%;
+  bottom: 50px;
+  right: 0px;
+  height: 10%;
   width: auto;
   z-index: 1;
 }
@@ -46,6 +46,10 @@ button.btns {
   background-color: #878787;
 }
 
+a#email {
+  color: white;
+}
+
 a:link {
   color: black;
 }
@@ -59,29 +63,14 @@ div.jumbotron {
   padding: .5%;
 }
 
-.footer {
-  min-height: 50px;
-  background: #878787;
-  text-align: center;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-}
-
 @media screen and (min-width:640px){
-  img#baby-yoda {
-    bottom: 0;
+  img#baby-yoda-gif {
+    bottom: 0px;
     height: 20%;
   }
 }
 
 @media screen and (min-width:641px) and (max-width:768px){
-  img#baby-yoda {
-    bottom: 0;
-    right: 20px;
-    height: 20%;
-  }
 }
 
 @media screen and (min-width:769px) and (max-width:980px){
