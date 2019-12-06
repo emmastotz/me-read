@@ -9,7 +9,7 @@ const Editor = props => {
 			<Wrapper>
 				<div className="Editor">
 					<p id="text-edit">Edit the text below:</p>
-					<textarea className="form-control" id="input" onChange={props.onChange}>{props.markdown}</textarea>
+					<textarea defaultValue={props.markdown}className="form-control" id="input" onChange={props.onChange}></textarea>
 				</div>
 			</Wrapper>
 		</div>

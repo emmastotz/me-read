@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const templateController = require("../../controller/templateController");
 
-// Matches with "/api/templates"
+// Matches with "Generator/api/templates"
 router.route("/")
   .get(templateController.findAll)
   .post(templateController.create);
