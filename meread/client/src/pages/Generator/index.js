@@ -56,7 +56,7 @@ Please make sure to update tests as appropriate.`,
 
   saveTemplate = event => {
     event.preventDefault();
-    API.saveTemplate(this.state.markdown).then(res => {
+    API.saveTemplate({markdown:this.state.markdown}).then(res => {
       console.log("Click function working. Res below.");
       console.log(res);
       this.setState({value: res})
