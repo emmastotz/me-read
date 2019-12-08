@@ -1,0 +1,13 @@
+.jumbotron {
+  margin-top: 3%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #C4C4C4;
+  text-align: left;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.display-form {
+  margin-top: 4%;
+}

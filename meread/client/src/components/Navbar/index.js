@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Preview from "../Preview";
+import Preview from "../FreeFormTemplate/Preview";
 import YodaForm from "../YodaForm";
 import "./style.css";
 

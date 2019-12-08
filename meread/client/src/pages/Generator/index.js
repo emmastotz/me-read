@@ -9,7 +9,7 @@ import Navbar from "../../components/Navbar";
 import API from "../../utils/API";
 import "./style.css";
 import marked from 'marked';
-import Editor from "../../components/Editor/";
+import Editor from "../../components/FreeFormTemplate/Editor/";
 import BabyYodish from '../../utils/BabyYoda';
 
 class Generator extends Component {
