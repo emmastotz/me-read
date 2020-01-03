@@ -55,6 +55,7 @@ Deployed at https://github.com/emmastotz/rebelscum
 ##### Technologies Used
 * React.js
 * CSS3
+* Animate.css
 * Bootstrap 4
 * JavaScript
 * Node
